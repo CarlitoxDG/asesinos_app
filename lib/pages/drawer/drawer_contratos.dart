@@ -1,3 +1,4 @@
+import 'package:asesinos_app/widgets/contratos.dart';
 import 'package:flutter/material.dart';
 
 class DrawerContratos extends StatelessWidget {
@@ -16,52 +17,45 @@ class DrawerContratos extends StatelessWidget {
         ),
       ),
       backgroundColor: Color.fromARGB(255, 34, 34, 34),
-      body: Column(
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Image.asset('assets/images/Zero.jpg', width: 200, height: 200),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text(
-                      'Objetivo: Zero \n Estado: Completado \n Monto de dinero: 86.000 \n Tipo de contrato: Cerrado \n Categoría: C\n',
-                      style: TextStyle(color: Colors.white)),
-                ),
-              ],
+      body: Padding(
+        padding: EdgeInsets.all(8),
+        child: ListView(
+          children: [
+            Contratos(
+              imagen: 'copano.jpg',
+              objetivo: 'Fabricio Copano',
+              descripcion:
+                  'Eliminar al reconocido comediante chileno que ha estado filtrando información confidencial sobre la organización.',
+              recompensa: '100.000',
+              dificultad: 'Alta',
+              ubicacion: 'Teatro Nacional, Santiago, Chile',
             ),
-          ),
-          Divider(color: Color.fromARGB(255, 202, 21, 8)),
-          Container(
-            child: Row(
-              children: [
-                Image.asset('assets/images/Cassian.jpg',
-                    width: 200, height: 200),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text(
-                    ' Objetivo: Cassian \n Estado: Pendiente\n Monto de dinero: 450.000 \n Tipo de contrato: Abierto \n Categoría: A \n',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ],
+            Divider(
+              color: Colors.redAccent,
             ),
-          ),
-          Divider(color: Color.fromARGB(255, 202, 21, 8)),
-          Container(
-            child: Row(
-              children: [
-                Image.asset('assets/images/Ares.webp', width: 200, height: 200),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text(
-                      'Objetivo: Ares \n Estado: Pendiente \n Monto de dinero: 120.000 \n Tipo de contrato: Abierto \n Categoría: B \n',
-                      style: TextStyle(color: Colors.white)),
-                ),
-              ],
+            Contratos(
+              imagen: 'Boric.jpg',
+              objetivo: 'Gabriel Boric',
+              descripcion:
+                  'Secuestrar al político chileno para enviar un mensaje a sus aliados.',
+              recompensa: '1.500.000',
+              dificultad: 'Media',
+              ubicacion: 'Congreso Nacional, Valparaíso, Chile',
             ),
-          ),
-        ],
+            Divider(
+              color: Colors.redAccent,
+            ),
+            Contratos(
+              imagen: 'Adam_Sandler.jpg',
+              objetivo: 'Adam Sandler',
+              descripcion:
+                  'Eliminar al actor y productor estadounidense que ha estado difamando a la organización en sus películas.',
+              recompensa: '200.000',
+              dificultad: 'Alta',
+              ubicacion: 'Mansión Sandler, Los Ángeles, Estados Unidos',
+            ),
+          ],
+        ),
       ),
     );
   }

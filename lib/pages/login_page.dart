@@ -12,6 +12,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController usuarioController = TextEditingController(text: '');
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 147, 153, 155),
       body: ListView(
@@ -27,7 +28,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Text(
                 'Iniciar Sesión',
-                style: TextStyle(fontSize: 40.0),
+                style: TextStyle(
+                  fontSize: 40.0,
+                ),
               ),
               SizedBox(
                 width: 160.0,
@@ -35,11 +38,15 @@ class _LoginPageState extends State<LoginPage> {
                 child: Divider(color: Color.fromARGB(255, 84, 110, 122)),
               ),
               TextField(
+                controller: usuarioController,
                 decoration: InputDecoration(
-                    labelText: 'Usuario',
-                    suffixIcon: Icon(MdiIcons.glasses),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
+                  labelText: 'Usuario',
+                  fillColor: Colors.white,
+                  suffixIcon: Icon(MdiIcons.glasses),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                ),
               ),
               Divider(
                 height: 18.0,
@@ -49,10 +56,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               TextField(
                 decoration: InputDecoration(
-                    labelText: 'Contraseña',
-                    suffixIcon: Icon(MdiIcons.lock),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0))),
+                  labelText: 'Contraseña',
+                  suffixIcon: Icon(MdiIcons.lock),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                ),
               ),
               Divider(
                 height: 15.0,
@@ -61,7 +70,8 @@ class _LoginPageState extends State<LoginPage> {
                 padding: EdgeInsets.only(top: 70),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.lightBlue),
+                      backgroundColor: const Color.fromARGB(255, 173, 42, 32),
+                    ),
                     child: Text(
                       'Iniciar Sesión',
                       style: TextStyle(
@@ -70,11 +80,13 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     onPressed: () {
-                      MaterialPageRoute rutaHome =
-                          MaterialPageRoute(builder: (context) {
-                        return HomePage();
-                      });
-                      Navigator.push(context, rutaHome);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              HomePage(usuarioController.text),
+                        ),
+                      );
                     }),
               )
             ],
