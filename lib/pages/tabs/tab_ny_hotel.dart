@@ -19,7 +19,7 @@ class TabNyHotel extends StatelessWidget {
                     image: DecorationImage(
                         image: AssetImage('assets/images/NYC_Continental.webp'),
                         fit: BoxFit.fill),
-                    border: Border.all(color: Colors.yellow, width: 4)),
+                    border: Border.all(color: Color(0xFF1A237E), width: 4)),
               ),
             ),
             Padding(
@@ -61,8 +61,13 @@ class TabNyHotel extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF1A237E)),
                 onPressed: () {},
-                child: Text('LLamar'),
+                child: Text(
+                  'Reservar',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             )
           ],

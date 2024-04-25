@@ -20,7 +20,7 @@ class TabOsHotel extends StatelessWidget {
                         image:
                             AssetImage('assets/images/Osaka_Continental.webp'),
                         fit: BoxFit.fill),
-                    border: Border.all(color: Colors.yellow, width: 4)),
+                    border: Border.all(color: Colors.red, width: 4)),
               ),
             ),
             Padding(
@@ -30,22 +30,31 @@ class TabOsHotel extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
-                    child: Text('Ubicación: Centro de Osaka, Japón'),
+                    child: Text(
+                      'Ubicación: Centro de Osaka, Japón',
+                      style: TextStyle(fontSize: 15),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Medidas de seguridad: Seguridad avanzada, personal altamente capacitado.'),
+                      'Medidas de seguridad: Seguridad avanzada, personal altamente capacitado.',
+                      style: TextStyle(fontSize: 15),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Servicios exclusivos:Instalaciones de entrenamiento de clase mundial, armería especializada, espacios para reuniones discretas.'),
+                      'Servicios exclusivos:Instalaciones de entrenamiento de clase mundial, armería especializada, espacios para reuniones discretas.',
+                      style: TextStyle(fontSize: 15),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Reseñas y clasificaciones:"¡Increíble! Excelente atención al detalle." - K.S.'),
+                      'Reseñas y clasificaciones:"¡Increíble! Excelente atención al detalle." - K.S.',
+                      style: TextStyle(fontSize: 15),
+                    ),
                   ),
                 ],
               ),
@@ -53,8 +62,13 @@ class TabOsHotel extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFD32F2F)),
                 onPressed: () {},
-                child: Text('LLamar'),
+                child: Text(
+                  'Reservar',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             )
           ],

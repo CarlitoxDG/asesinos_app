@@ -35,8 +35,6 @@ class _LoginPageState extends State<LoginPage> {
                 child: Divider(color: Color.fromARGB(255, 84, 110, 122)),
               ),
               TextField(
-                enableInteractiveSelection: false,
-                textCapitalization: TextCapitalization.characters,
                 decoration: InputDecoration(
                     labelText: 'Usuario',
                     suffixIcon: Icon(MdiIcons.glasses),
@@ -50,8 +48,6 @@ class _LoginPageState extends State<LoginPage> {
                 height: 15.0,
               ),
               TextField(
-                enableInteractiveSelection: false,
-                obscureText: true,
                 decoration: InputDecoration(
                     labelText: 'Contraseña',
                     suffixIcon: Icon(MdiIcons.lock),
@@ -62,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 15.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 70),
+                padding: EdgeInsets.only(top: 70),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.lightBlue),

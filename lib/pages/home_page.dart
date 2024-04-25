@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 34, 34, 34),
       appBar: AppBar(
+        foregroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           'Bienvenido',
@@ -52,25 +54,47 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Nombre: John Wick',
-                    style: TextStyle(fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Nombre: John Wick',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
                   ),
-                  Text(
-                    'Nacionalidad: Americano',
-                    style: TextStyle(fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Nacionalidad: Estadounidense',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
                   ),
-                  Text(
-                    'Ciudad: Nueva York',
-                    style: TextStyle(fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Ciudad: Nueva York',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
                   ),
-                  Text(
-                    'Edad: 30',
-                    style: TextStyle(fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Edad: 45',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
                   ),
-                  Text(
-                    'Asesinatos: 40',
-                    style: TextStyle(fontSize: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Asesinatos: 326',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Habilidades: \n - Experto en combate cuerpo a cuerpo, incluyendo diversas artes marciales. \n - Maestro en el manejo de armas de fuego, tanto convencionales como especializadas. \n - Habilidad excepcional en tácticas de sigilo y infiltración. \n - Capacidad para improvisar y adaptarse a cualquier situación. \n - Resistencia física y mental extraordinaria.',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    ),
                   ),
                 ],
               ),
@@ -80,6 +104,7 @@ class _HomePageState extends State<HomePage> {
       ),
       //Navegación
       drawer: Drawer(
+        backgroundColor: Color.fromARGB(255, 34, 34, 34),
         child: ListView(
           children: [
             DrawerHeader(
@@ -94,13 +119,13 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/JohnWick.jpg'),
                           fit: BoxFit.fill,
                         ),
-                        border: Border.all(width: 2.0, color: Colors.black)),
+                        border: Border.all(width: 2.0, color: Colors.red)),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(4),
                     child: Text(
                       'John Wick',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
                 ],
@@ -108,6 +133,8 @@ class _HomePageState extends State<HomePage> {
             ),
             //Navegacion a las otras Páginas.
             ListTile(
+              textColor: Colors.white,
+              iconColor: Colors.red,
               title: Text('Contratos'),
               leading: Icon(MdiIcons.clipboard),
               onTap: () {
@@ -121,6 +148,8 @@ class _HomePageState extends State<HomePage> {
             ),
             Divider(),
             ListTile(
+              textColor: Colors.white,
+              iconColor: Colors.red,
               title: Text('Hoteles'),
               leading: Icon(MdiIcons.home),
               onTap: () {
@@ -134,6 +163,8 @@ class _HomePageState extends State<HomePage> {
             ),
             Divider(),
             ListTile(
+              textColor: Colors.white,
+              iconColor: Colors.red,
               title: Text('Servicios'),
               leading: Icon(MdiIcons.cellphone),
               onTap: () {
@@ -147,6 +178,8 @@ class _HomePageState extends State<HomePage> {
             ),
             Divider(),
             ListTile(
+              textColor: Colors.white,
+              iconColor: Colors.red,
               title: Text('Salir'),
               leading: Icon(MdiIcons.exitToApp),
               onTap: () {

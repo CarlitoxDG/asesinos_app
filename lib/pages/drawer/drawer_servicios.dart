@@ -16,7 +16,9 @@ class DrawerServicios extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 34, 34, 34),
       appBar: AppBar(
+        foregroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           'Servicios',
@@ -30,6 +32,7 @@ class DrawerServicios extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
+                textColor: Colors.white,
                 title: Text('Sommelier'),
                 subtitle: Text('Armas y Munición'),
                 leading:
@@ -39,6 +42,7 @@ class DrawerServicios extends StatelessWidget {
                 }),
             Divider(),
             ListTile(
+                textColor: Colors.white,
                 title: Text('Doctor'),
                 subtitle: Text('Servicio Médico de Urgencias'),
                 leading: Icon(MdiIcons.medication, color: Colors.red, size: 40),
@@ -47,6 +51,7 @@ class DrawerServicios extends StatelessWidget {
                 }),
             Divider(),
             ListTile(
+                textColor: Colors.white,
                 title: Text('Sastre'),
                 subtitle: Text('proporciona trajes con resistencia a balas'),
                 leading: Icon(MdiIcons.tshirtCrew,
@@ -56,6 +61,7 @@ class DrawerServicios extends StatelessWidget {
                 }),
             Divider(),
             ListTile(
+                textColor: Colors.white,
                 title: Text('Limpiadores'),
                 subtitle: Text(
                     'encargados del aseo de lugares en que hubo asesinatos y de “gestionar” los cadáveres'),

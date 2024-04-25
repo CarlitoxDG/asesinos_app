@@ -20,7 +20,7 @@ class TabCblancaHotel extends StatelessWidget {
                         image: AssetImage(
                             'assets/images/Casablanca_hotelJW3.webp'),
                         fit: BoxFit.fill),
-                    border: Border.all(color: Colors.yellow, width: 4)),
+                    border: Border.all(color: Color(0xFF424242), width: 4)),
               ),
             ),
             Padding(
@@ -62,8 +62,13 @@ class TabCblancaHotel extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF424242)),
                 onPressed: () {},
-                child: Text('LLamar'),
+                child: Text(
+                  'Reservar',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             )
           ],

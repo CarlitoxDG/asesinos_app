@@ -53,6 +53,7 @@ class _DrawerHotelesState extends State<DrawerHoteles> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: appbarColorText[index],
         centerTitle: true,
         title: Text(
           appbarTitulos[index],
@@ -77,7 +78,7 @@ class _DrawerHotelesState extends State<DrawerHoteles> {
             label: 'Osaka',
           ),
           BottomNavigationBarItem(
-            icon: Icon(MdiIcons.romanNumeral4),
+            icon: Icon(Icons.stadium),
             label: 'Roma',
           ),
         ],

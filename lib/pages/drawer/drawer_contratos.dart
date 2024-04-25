@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DrawerContratos extends StatelessWidget {
   const DrawerContratos({super.key});
@@ -8,46 +7,61 @@ class DrawerContratos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 136, 115, 21),
+        backgroundColor: Color.fromARGB(255, 202, 21, 8),
         title: Text(
           'Contratos',
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(8),
-        child: ListView(
-          children: [
-            ListTile(
-              title: Text('Sommelier'),
-              subtitle: Text('Armas y Munición'),
-              leading:
-                  Icon(MdiIcons.ammunition, color: Colors.orange, size: 40),
-              onTap: () {},
+      backgroundColor: Color.fromARGB(255, 34, 34, 34),
+      body: Column(
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Image.asset('assets/images/Zero.jpg', width: 200, height: 200),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text(
+                      'Objetivo: Zero \n Estado: Completado \n Monto de dinero: 86.000 \n Tipo de contrato: Cerrado \n Categoría: C\n',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
             ),
-            ListTile(
-              title: Text('Doctor'),
-              subtitle: Text('Servicio Médico de Urgencias'),
-              leading: Icon(MdiIcons.medication, color: Colors.red, size: 40),
-              onTap: () {},
+          ),
+          Divider(color: Color.fromARGB(255, 202, 21, 8)),
+          Container(
+            child: Row(
+              children: [
+                Image.asset('assets/images/Cassian.jpg',
+                    width: 200, height: 200),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text(
+                    ' Objetivo: Cassian \n Estado: Pendiente\n Monto de dinero: 450.000 \n Tipo de contrato: Abierto \n Categoría: A \n',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
-            ListTile(
-              title: Text('Sastre'),
-              subtitle: Text('proporciona trajes con resistencia a balas'),
-              leading: Icon(MdiIcons.tshirtCrew,
-                  color: const Color.fromARGB(255, 185, 185, 6), size: 40),
-              onTap: () {},
+          ),
+          Divider(color: Color.fromARGB(255, 202, 21, 8)),
+          Container(
+            child: Row(
+              children: [
+                Image.asset('assets/images/Ares.webp', width: 200, height: 200),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text(
+                      'Objetivo: Ares \n Estado: Pendiente \n Monto de dinero: 120.000 \n Tipo de contrato: Abierto \n Categoría: B \n',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
             ),
-            ListTile(
-              title: Text('Limpiadores'),
-              subtitle: Text(
-                  'encargados del aseo de lugares en que hubo asesinatos y de “gestionar” los cadáveres'),
-              leading: Icon(MdiIcons.broom, color: Colors.brown, size: 40),
-              onTap: () {},
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -30,22 +30,26 @@ class TabRomaHotel extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
-                    child: Text('Ubicación: Corazón de Roma, Italia'),
+                    child: Text('Ubicación: Corazón de Roma, Italia',
+                        style: TextStyle(fontSize: 15)),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Medidas de seguridad: Entorno seguro, sistemas sofisticados.'),
+                        'Medidas de seguridad: Entorno seguro, sistemas sofisticados.',
+                        style: TextStyle(fontSize: 15)),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Servicios exclusivos: Instalaciones de entrenamiento de élite, armería especializada, áreas de reunión privadas con vistas panorámicas.'),
+                        'Servicios exclusivos: Instalaciones de entrenamiento de élite, armería especializada, áreas de reunión privadas con vistas panorámicas.',
+                        style: TextStyle(fontSize: 15)),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
-                        'Reseñas y clasificaciones: "La belleza de Roma, con la discreción que necesitamos." - G.P.'),
+                        'Reseñas y clasificaciones: "La belleza de Roma, con la discreción que necesitamos." - G.P.',
+                        style: TextStyle(fontSize: 15)),
                   ),
                 ],
               ),
@@ -53,8 +57,13 @@ class TabRomaHotel extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFFFAB00)),
                 onPressed: () {},
-                child: Text('LLamar'),
+                child: Text(
+                  'Reservar',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             )
           ],

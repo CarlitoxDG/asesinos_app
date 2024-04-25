@@ -6,14 +6,14 @@ class SommelierPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 34, 139, 34),
+      backgroundColor: Color.fromARGB(255, 224, 224, 224),
       appBar: AppBar(
         centerTitle: true,
         title: Text(
           'Sommelier',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Color.fromARGB(227, 216, 199, 41),
+        backgroundColor: Color.fromARGB(255, 63, 81, 181),
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 20),
@@ -28,7 +28,8 @@ class SommelierPage extends StatelessWidget {
                       image: AssetImage('assets/images/Sommelier.webp'),
                       fit: BoxFit.cover,
                     ),
-                    border: Border.all(color: Colors.yellow, width: 4)),
+                    border: Border.all(
+                        color: Color.fromARGB(255, 63, 81, 181), width: 4)),
               ),
             ),
             Padding(
@@ -40,47 +41,47 @@ class SommelierPage extends StatelessWidget {
                     padding: const EdgeInsets.all(2),
                     child: Text(
                       'Nombre: James Bennett',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(2),
                     child: Text(
                       'Nacionalidad: Britanico',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(2),
                     child: Text(
                       'Especialidad: Vinos de la región del valle del Ródano',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(2),
                     child: Text(
                       'Horarios de Atención: Miércoles a Sábado: 18:00 PM - 23:00 PM',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(2),
                     child: Text(
-                      'Descripción: James Bennett es un sommelier británico con una pasión incomparable por los vinos y la cultura gastronómica. Con una formación excepcional en las mejores bodegas de Europa, James ofrece su experiencia en The Royal Vineyard, un restaurante de renombre internacional. Su especialidad radica en los vinos de la región del valle del Ródano, donde ha desarrollado un conocimiento profundo y una apreciación por las variedades únicas y los terroirs distintivos de la zona. James combina su conocimiento experto con un toque británico distintivo para ofrecer a los comensales una experiencia enológica única. Su enfoque dedicado y su atención meticulosa a los detalles garantizan una experiencia gastronómica inolvidable en cada visita al restaurante.',
-                      style: TextStyle(color: Colors.white),
+                      'Descripción: James Bennett, exmilitar británico, ofrece armas de fuego de precisión y municiones de alta calidad en la Armería Delacourt. Con su experiencia y atención personalizada, garantiza que cada cliente reciba el arma adecuada para sus necesidades.',
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   )
                 ],
               ),
             ),
-            /* Padding(
+            Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text('LLamar'),
               ),
-            ) */
+            )
           ],
         ),
       ),
