@@ -27,7 +27,7 @@ class DrawerContratos extends StatelessWidget {
               descripcion:
                   'Eliminar al reconocido comediante chileno que ha estado filtrando información confidencial sobre la organización.',
               recompensa: '100.000',
-              dificultad: 'Alta',
+              dificultad: 'Media',
               ubicacion: 'Teatro Nacional, Santiago, Chile',
             ),
             Divider(
@@ -39,7 +39,7 @@ class DrawerContratos extends StatelessWidget {
               descripcion:
                   'Secuestrar al político chileno para enviar un mensaje a sus aliados.',
               recompensa: '1.500.000',
-              dificultad: 'Media',
+              dificultad: 'Alta',
               ubicacion: 'Congreso Nacional, Valparaíso, Chile',
             ),
             Divider(

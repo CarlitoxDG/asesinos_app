@@ -3,6 +3,7 @@ import 'package:asesinos_app/pages/drawer/drawer_hoteles.dart';
 import 'package:asesinos_app/pages/drawer/drawer_servicios.dart';
 import 'package:asesinos_app/pages/perfiles/ares_perfil.dart';
 import 'package:asesinos_app/pages/perfiles/cassian_perfil.dart';
+import 'package:asesinos_app/pages/perfiles/john_perfil.dart';
 import 'package:asesinos_app/pages/perfiles/zero_perfil.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +32,8 @@ class _HomePageState extends State<HomePage> {
       perfil = ZeroPerfil();
     } else if (widget.usuario == 'Cassian') {
       perfil = CassianPerfil();
+    } else if (widget.usuario == 'JohnWick') {
+      perfil = JohnPerfil();
     } else {
       perfil = Center(
         child: Text(
